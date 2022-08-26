@@ -132,3 +132,9 @@
 .rowbtn {
   text-align: center;
 }
+
+.address {
+  font-size: 0.8rem;
+  color: rgb(26, 26, 26);
+  font-weight: 400;
+}
