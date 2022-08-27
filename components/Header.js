@@ -2,38 +2,11 @@ import { MDBBtn, MDBIcon, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import Web3 from 'web3';
 import React from 'react';
 import styles from '../styles/Home.module.css'
+import { MetaMaskProvider } from 'metamask-react';
+import Metmask from './Metamask';
 
 export default function Header() {
     const [LoginAccount, setLoginAccount] = React.useState("")
-
-    //connect to metemask event.
-    const connect = async function (event) {
-        if (!window.ethereum) {
-            alert("install metemask first");
-            return
-        }
-
-        const web3 = new Web3(window.ethereum);
-        const accounts = await web3.eth.requestAccounts();
-        setLoginAccount(accounts[0]);
-    }
-
-    //
-    const fixAddress = function (address) {
-        return (
-            <div className={styles.address}>
-                <MDBRow>
-                    <MDBCol size='md'>
-                        <MDBIcon fab icon="app-store" style={{ color: '#55acee' }} size="lg" />
-                    </MDBCol>
-                    <MDBCol size='md'>
-                        0x12****21f6
-                    </MDBCol>
-                </MDBRow>
-
-            </div >
-        );
-    }
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-white">
@@ -73,7 +46,9 @@ export default function Header() {
                 </div>
 
                 <div className="">
-                    {LoginAccount ? fixAddress(LoginAccount) : <MDBBtn outline rounded onClick={connect}>Connect</MDBBtn>}
+                    <MetaMaskProvider>
+                        <Metmask />
+                    </MetaMaskProvider>
                 </div>
 
             </div>
