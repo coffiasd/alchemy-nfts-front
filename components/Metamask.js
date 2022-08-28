@@ -6,6 +6,9 @@ export default function Metmask() {
     const { status, connect, account } = useMetaMask();
 
     const fixAddress = function (address) {
+
+        const fix = address.substring(0, 4) + "****" + address.substring(address.length - 4)
+
         return (
             <div className={styles.address}>
                 <MDBRow>
@@ -13,7 +16,7 @@ export default function Metmask() {
                         <MDBIcon fab icon="app-store" style={{ color: '#55acee' }} size="lg" />
                     </MDBCol>
                     <MDBCol size='md'>
-                        0x12****21f6
+                        {fix}
                     </MDBCol>
                 </MDBRow>
 

@@ -1,13 +1,9 @@
 import { MDBBtn, MDBIcon, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import Web3 from 'web3';
 import React from 'react';
-import styles from '../styles/Home.module.css'
-import { MetaMaskProvider } from 'metamask-react';
-import Metmask from './Metamask';
+import Metamask from './Metamask';
 
 export default function Header() {
-    const [LoginAccount, setLoginAccount] = React.useState("")
-
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-white">
             <div className="container-fluid">
@@ -37,18 +33,16 @@ export default function Header() {
                             <a className="nav-link" href="#">Home</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#"><MDBIcon style={{ color: '#55acee' }} fab size='sm' icon='twitter' /> twitter</a>
+                            <a className="nav-link" href="https://twitter.com/coffiasse"><MDBIcon style={{ color: '#55acee' }} fab size='sm' icon='twitter' /> twitter</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#"><MDBIcon fab style={{ color: '#000000' }} size='sm' icon='github' /> github</a>
+                            <a className="nav-link" href="https://github.com/coffiasd"><MDBIcon fab style={{ color: '#000000' }} size='sm' icon='github' /> github</a>
                         </li>
                     </ul>
                 </div>
 
                 <div className="">
-                    <MetaMaskProvider>
-                        <Metmask />
-                    </MetaMaskProvider>
+                    <Metamask />
                 </div>
 
             </div>
