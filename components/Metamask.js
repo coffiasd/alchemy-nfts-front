@@ -12,10 +12,10 @@ export default function Metmask() {
         return (
             <div className={styles.address}>
                 <MDBRow>
-                    <MDBCol size='md'>
-                        <MDBIcon fab icon="app-store" style={{ color: '#55acee' }} size="lg" />
-                    </MDBCol>
-                    <MDBCol size='md'>
+                    {/* <MDBCol size='sm'>
+                        <MDBIcon fab icon="app-store" style={{ color: '#55acee' }} size="sm" />
+                    </MDBCol> */}
+                    <MDBCol size='sm'>
                         {fix}
                     </MDBCol>
                 </MDBRow>

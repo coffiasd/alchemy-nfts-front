@@ -1,8 +1,10 @@
-import { MDBBtn, MDBIcon, MDBRow, MDBCol } from 'mdb-react-ui-kit';
+import { MDBIcon } from 'mdb-react-ui-kit';
 import Web3 from 'web3';
 import React from 'react';
 import Metamask from './Metamask';
 import Link from 'next/link'
+import Image from 'next/image'
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 
 export default function Header() {
     return (
@@ -22,22 +24,22 @@ export default function Header() {
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <Link className="navbar-brand mt-2 mt-lg-0" href="/">
-                        <img
-                            src="https://mdbcdn.b-cdn.net/img/Marketing/general/logo/small/mdb-react.webp"
-                            height="40"
+                        <Image
+                            src=""
+                            // height="40"
+                            // width="40"
                             alt="ayden"
-                            loading="lazy"
                         />
                     </Link>
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link className="nav-link" href="#">Home</Link>
+                            <Link className="nav-link" href="/">Home|</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" href="https://twitter.com/coffiasse"><MDBIcon style={{ color: '#55acee' }} fab size='sm' icon='twitter' /> twitter</Link>
+                            <Link className="nav-link" href="https://twitter.com/coffiasse">twitter|</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" href="https://github.com/coffiasd"><MDBIcon fab style={{ color: '#000000' }} size='sm' icon='github' /> github</Link>
+                            <Link className="nav-link" href="https://github.com/coffiasd">github</Link>
                         </li>
                     </ul>
                 </div>

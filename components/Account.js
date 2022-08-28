@@ -46,6 +46,7 @@ export default function Account() {
         console.log(Mint, account);
         if (Mint == 0) {
             setDefault("./default.svg");
+            return
         }
         connectedContract.methods.tokenURI(web3.utils.BN(Mint)).call({ from: account }).then(function (info) {
             const base64Img = info.substring(29);
