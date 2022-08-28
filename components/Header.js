@@ -2,6 +2,7 @@ import { MDBBtn, MDBIcon, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import Web3 from 'web3';
 import React from 'react';
 import Metamask from './Metamask';
+import Link from 'next/link'
 
 export default function Header() {
     return (
@@ -20,23 +21,23 @@ export default function Header() {
                 </button>
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <a className="navbar-brand mt-2 mt-lg-0" href="/">
+                    <Link className="navbar-brand mt-2 mt-lg-0" href="/">
                         <img
                             src="https://mdbcdn.b-cdn.net/img/Marketing/general/logo/small/mdb-react.webp"
                             height="40"
                             alt="ayden"
                             loading="lazy"
                         />
-                    </a>
+                    </Link>
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Home</a>
+                            <Link className="nav-link" href="#">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="https://twitter.com/coffiasse"><MDBIcon style={{ color: '#55acee' }} fab size='sm' icon='twitter' /> twitter</a>
+                            <Link className="nav-link" href="https://twitter.com/coffiasse"><MDBIcon style={{ color: '#55acee' }} fab size='sm' icon='twitter' /> twitter</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="https://github.com/coffiasd"><MDBIcon fab style={{ color: '#000000' }} size='sm' icon='github' /> github</a>
+                            <Link className="nav-link" href="https://github.com/coffiasd"><MDBIcon fab style={{ color: '#000000' }} size='sm' icon='github' /> github</Link>
                         </li>
                     </ul>
                 </div>
